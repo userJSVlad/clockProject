@@ -1,0 +1,131 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+
+
+body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.clock{
+   height: 500px;
+   width: 500px;
+   position: relative;
+   border-radius: 50%;
+   background-image: url('../img/6bfe2e44180922b4e79728ebcfe21abe-removebg-preview.png');
+   background-position: center;
+   background-size: cover;
+}
+.clock::after{
+   content: "";
+   width: 25px;
+   height: 25px;
+   position: absolute;
+   background-color:#000;
+   border-radius: 50%;
+   z-index: 10;
+   top: 47%;
+   left: 50%;
+   box-shadow: 2px 2px 7px 3px rgb(0,0,0,0.3);
+}
+.hour{
+   position: absolute;
+   display: flex;
+   justify-content: center;
+}
+
+.hour{
+   width: 160px;
+   height: 160px;
+   top: calc(49% - 80px);
+   left: calc(50% - 70px);
+}
+
+.hour::before{
+   content: "";
+   width: 10px;
+   height: 80px;
+   background-color: #615f5f;
+   border-radius: 8px 8px 0 0 ;
+   left: 55%;
+   box-shadow: 2px 2px 7px 4px rgb(0,0,0,0.2);
+}
+
+.minuts{
+   position: absolute;
+   display: flex;
+   justify-content: center;
+}
+
+.minuts{
+   width: 200px;
+   height: 200px;
+   top: calc(50% - 95px);
+   left: calc(50% - 96px);
+}
+
+.minuts::before{
+   content: "";
+   width: 5px;
+   height: 100px;
+   background-color: #615f5f;
+   border-radius: 4px 4px 0 0 ;
+
+   box-shadow: 2px 2px 7px 3px rgb(0,0,0,0.3);
+}
+
+.seconds{
+   position: absolute;
+   display: flex;
+   justify-content: center;
+}
+
+.seconds{
+   width: 250px;
+   height: 250px;
+   top: calc(50% - 125px);
+   left: calc(50% - 115px);
+}
+
+.seconds::after{
+   content: "";
+   width: 2px;
+   height: 150px;
+   background-color: #2b2525;
+   border-radius: 10px 10px 0 0 ;
+   box-shadow: 2px 2px 5px 1px rgb(0,0,0,0.3);
+}
